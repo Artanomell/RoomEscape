@@ -20,6 +20,10 @@ Room Escape - 2D игра в жанре Puzzle-Platformer на ОС Windows, г�
 
 ![Gameplay](https://cdn.discordapp.com/attachments/178558940315910145/499317142873833472/unknown.png)
 
+* Внутриигровое меню
+
+![Ingame Menu](https://cdn.discordapp.com/attachments/428973249502642208/499319755744870400/unknown.png)
+
 #### 2.3 Характеристики пользователей
 Целевая аудитория:
 * 13-50 лет;
