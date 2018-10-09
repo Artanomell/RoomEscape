@@ -41,7 +41,7 @@ SCREENSHOTS
 
 Оперативная память: 4 GB ОЗУ
 
-DirectX: Версии 10
+DirectX: Версии 10 и выше
 
 Процессор: Intel Core i5-7500
 
