@@ -58,4 +58,4 @@ DirectX: Версии 10 и выше
 
 Процессор: Intel Core i5-7500
 
-Видеокарта: Nvidia GeForce GTX 460
+Видеокарта: Nvidia GeForce GTX 660
