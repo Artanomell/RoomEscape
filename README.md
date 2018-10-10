@@ -4,7 +4,7 @@ Room Escape - 2D игра в жанре Puzzle-Platformer на ОС Windows, г�
 
 * [Project Requirements](https://github.com/BogaDev/RoomEscape/blob/master/docs/ProjectRequirements.md)
 
-* [Gameplay Description](https://github.com/BogaDev/RoomEscape/blob/master/docs/GameplayDescription.md);
+* [Gameplay Description](https://github.com/BogaDev/RoomEscape/blob/master/docs/GameplayDescription.md)
 
 * [Mockups](https://github.com/BogaDev/RoomEscape/tree/master/docs/mockups)
 
