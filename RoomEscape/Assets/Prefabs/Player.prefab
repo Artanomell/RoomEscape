@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114106505900768646}
   - component: {fileID: 114315626778700102}
   - component: {fileID: 114541765144657508}
+  - component: {fileID: 114720877550175626}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292055068984230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22222255, y: -0.022222202, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.82, z: 0}
   m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_Children: []
   m_Father: {fileID: 4534899903385504}
@@ -104,7 +105,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1629588622576494}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9b1df6594e0c0574190ebb97003a9a37, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -112,7 +113,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.31, y: 1.47}
+    oldSize: {x: 1.44, y: 1.5}
     newSize: {x: 1.31, y: 1.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -165,11 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4a37adc6b8b2248ba2d1249a690fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMutiplier: 3
+  fallMutiplier: 2.5
   lowJumpMutiplier: 10
   booster: 1.5
   gravity: 2.2
-  test: 3
 --- !u!114 &114541765144657508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +188,17 @@ MonoBehaviour:
   distanceToGround: 0.05
   sideGroundCheckRay: {x: 0.285, y: 0}
   coyoteTime: 0.2
+--- !u!114 &114720877550175626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629588622576494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2b86a29670dde44a5b09871708e814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212124824079523522
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -268,7 +279,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300002, guid: 46a37085c77b4c54fb4349284f2cdf5b, type: 3}
+  m_Sprite: {fileID: 21300014, guid: 2b7f2095fd51a644395b1b79ff6105e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

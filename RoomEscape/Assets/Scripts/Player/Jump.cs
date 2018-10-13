@@ -5,11 +5,11 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     #region vars
-    public float jumpForce = 10;
+    public float jumpForce = 43;
     public LayerMask groundMask;
     public float distanceToGround = 0.05f;
     [Tooltip("The vector that is uses to set the ground check rays on the edges of the player object.")]
-    public Vector2 sideGroundCheckRay;
+    public Vector2 sideGroundCheckRay = new Vector2(0.285f, 0);
     [Tooltip("How much time does player get to jump right after he stepped off of the platform?")]
     public float coyoteTime = 0.2f;
     public bool isJumped { get; private set; }  // Is player has jumped already

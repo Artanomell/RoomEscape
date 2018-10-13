@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     #region vars
-    public float speed = 300;
+    public float speed = 330;
 
     [SerializeField] private LayerMask obstacleMask;
 
@@ -23,8 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         CheckObstacles();
         Movement();
