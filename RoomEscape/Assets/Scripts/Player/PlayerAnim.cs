@@ -12,6 +12,7 @@ public class PlayerAnim : MonoBehaviour
     private Rigidbody2D rb;
     private float currVelocityX;
     private float currVelocityY;
+    private Vector3 startScale;
     #endregion vars
 
     // Use this for initialization
@@ -20,12 +21,15 @@ public class PlayerAnim : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        startScale = transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpriteFlip();
+        //SpriteFlip();
+        ObjFlip();
     }
 
     private void FixedUpdate()
@@ -38,10 +42,18 @@ public class PlayerAnim : MonoBehaviour
     /// </summary>
     private void SpriteFlip()
     {
-        if (Input.GetAxis("Horizontal") < 0)
+        if (Input.GetAxisRaw("Horizontal") < 0)
             spriteRenderer.flipX = true;
-        else if (Input.GetAxis("Horizontal") > 0)
+        else if (Input.GetAxisRaw("Horizontal") > 0)
             spriteRenderer.flipX = false;
+    }
+
+    private void ObjFlip()
+    {
+        if (Input.GetAxis("Horizontal") < 0)
+            transform.localScale = new Vector3(-startScale.x, startScale.y, startScale.z);
+        else if (Input.GetAxis("Horizontal") > 0)
+            transform.localScale = new Vector3(startScale.x, startScale.y, startScale.z);
     }
 
     /// <summary>

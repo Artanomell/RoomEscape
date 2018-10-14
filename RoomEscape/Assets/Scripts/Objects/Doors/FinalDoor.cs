@@ -16,6 +16,7 @@ public class FinalDoor : MonoBehaviour
     public UnityEvent enterDoor = new UnityEvent();
 
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
     #endregion vars
 
 
@@ -23,6 +24,7 @@ public class FinalDoor : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,6 +58,8 @@ public class FinalDoor : MonoBehaviour
     {
         isOpened = true;
         spriteRenderer.sprite = doorOpenedSprite;
+        animator.SetTrigger("pop");
+        StartCoroutine(OffPopAnim());
     }
 
     private bool CheckIsHasKey()
@@ -77,6 +81,12 @@ public class FinalDoor : MonoBehaviour
         }
 
         return false;
+    }
+
+    private IEnumerator OffPopAnim()
+    {
+        yield return new WaitForSeconds(0.01f);
+        animator.ResetTrigger("pop");
     }
 
     private void OnDrawGizmosSelected()

@@ -89,7 +89,7 @@ MonoBehaviour:
     decelerationTime: 0.1
     value: 0
   - Name: Jump
-    positiveButton: 119
+    positiveButton: 120
     altPositiveButton: 0
     negativeButton: 0
     altNegativeButton: 0

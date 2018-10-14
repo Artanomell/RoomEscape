@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 sidesCheckRay = new Vector2(0, 0.32f);
     private Vector2 spriteCenter = new Vector2(0, 0.33f);
     private float distanceToWall = 0.33f;
+    private Vector3 startScale;
     #endregion vars
 
     // Use this for initialization

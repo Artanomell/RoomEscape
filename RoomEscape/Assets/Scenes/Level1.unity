@@ -291,6 +291,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4988753252369428, guid: 0a7dc425b0f1b1743a1b9c8be5e72424,
     type: 2}
   m_PrefabInternal: {fileID: 243037508}
+--- !u!1 &345681252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467054297240342, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1688786312}
+--- !u!95 &345681253
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345681252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e471d570c9274a346a686e0290bb7190, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &407419349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3638,6 +3661,14 @@ Prefab:
       propertyPath: enterDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1209687163}
+    - target: {fileID: 4668901268833770, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668901268833770, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb, type: 2}
   m_IsPrefabAsset: 0
@@ -3757,6 +3788,11 @@ Prefab:
       propertyPath: transitionAnimator
       value: 
       objectReference: {fileID: 517990962}
+    - target: {fileID: 114805059089905040, guid: 788ede6617b42944b81c36f063e556b5,
+        type: 2}
+      propertyPath: axes.Array.data[2].positiveButton
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 788ede6617b42944b81c36f063e556b5, type: 2}
   m_IsPrefabAsset: 0
