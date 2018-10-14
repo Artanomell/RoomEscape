@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4668901268833770}
   - component: {fileID: 212552446615288406}
+  - component: {fileID: 61720759898754018}
   - component: {fileID: 114468942987601452}
+  - component: {fileID: 95981204159774520}
   m_Layer: 0
   m_Name: FinalDoor
   m_TagString: Untagged
@@ -41,6 +43,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61720759898754018
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467054297240342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0625, y: 1.1666666}
+    newSize: {x: 1.0625, y: 1.1666666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0625, y: 1.1666666}
+  m_EdgeRadius: 0
+--- !u!95 &95981204159774520
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467054297240342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e471d570c9274a346a686e0290bb7190, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114468942987601452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,9 +101,6 @@ MonoBehaviour:
   doorClosedSprite: {fileID: 21300002, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   isOpened: 0
   radius: 0.8
-  whoIsPlayer:
-    serializedVersion: 2
-    m_Bits: 512
   enterDoor:
     m_PersistentCalls:
       m_Calls:

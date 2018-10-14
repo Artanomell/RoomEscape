@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MySceneManager : MonoBehaviour
 {
     public Animator transitionAnimator;
+    private bool isTransition;
 
     public void OpenScene(string name)
     {
@@ -14,11 +15,13 @@ public class MySceneManager : MonoBehaviour
 
     public void OpenSceneWithTransition(string name)
     {
-        StartCoroutine(StartTransition(name));
+        if (!isTransition)
+            StartCoroutine(StartTransition(name));
     }
 
     IEnumerator StartTransition(string name)
     {
+        isTransition = true;
         transitionAnimator.SetTrigger("end");
 
         AnimatorClipInfo[] m_CurrentClipInfo;
@@ -32,5 +35,6 @@ public class MySceneManager : MonoBehaviour
         yield return new WaitForSeconds(m_CurrentClipLength);
 
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+        isTransition = false;
     }
 }

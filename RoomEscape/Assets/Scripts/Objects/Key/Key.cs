@@ -47,6 +47,7 @@ public class Key : MonoBehaviour
             if (!PlayerStats.instance.hasKey)
             {
                 PlayerStats.instance.hasKey = true;
+                PlayerStats.instance.key = gameObject;
                 followPlayer = true;
                 animator.Play("key_pop");
             }

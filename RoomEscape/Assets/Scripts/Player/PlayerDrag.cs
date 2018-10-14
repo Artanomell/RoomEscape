@@ -67,6 +67,7 @@ public class PlayerDrag : MonoBehaviour
                 // Set fake obj sprite and color to sprite and color of the real obj
                 spriteRenderer.sprite = draggedObj.GetComponent<DraggableObj>().spriteRenderer.sprite;
                 spriteRenderer.color = draggedObj.GetComponent<DraggableObj>().spriteRenderer.color;
+                spriteRenderer.sortingOrder = draggedObj.GetComponent<DraggableObj>().spriteRenderer.sortingOrder;
 
                 // Set fake obj child of this gameobject
                 draggedObjFake.transform.parent = gameObject.transform;

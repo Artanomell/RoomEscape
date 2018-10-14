@@ -9,6 +9,8 @@ public class PlayerStats : MonoBehaviour
     #region vars
     [ReadOnly]
     public bool hasKey;
+    [ReadOnly]
+    public GameObject key;
 
     public Vector2 lookDirection;
 

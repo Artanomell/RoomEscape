@@ -12,11 +12,11 @@ public class FinalDoor : MonoBehaviour
 
     public bool isOpened;
     public float radius = 1;
-    public LayerMask whoIsPlayer;
     public UnityEvent enterDoor = new UnityEvent();
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private bool isPlayerNearDoor;
     #endregion vars
 
 
@@ -39,7 +39,7 @@ public class FinalDoor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                if (CheckIsPlayerNearDoor())
+                if (isPlayerNearDoor)
                 {
                     enterDoor.Invoke();
                 }
@@ -50,13 +50,15 @@ public class FinalDoor : MonoBehaviour
     private void TryToOpen()
     {
         // Check if the player is near the door and does he has the key
-        if (CheckIsPlayerNearDoor() && CheckIsHasKey())
+        if (isPlayerNearDoor && CheckIsHasKey())
             OpenDoor();
     }
 
     private void OpenDoor()
     {
         isOpened = true;
+        PlayerStats.instance.hasKey = false;
+        Destroy(PlayerStats.instance.key);
         spriteRenderer.sprite = doorOpenedSprite;
         animator.SetTrigger("pop");
         StartCoroutine(OffPopAnim());
@@ -67,21 +69,6 @@ public class FinalDoor : MonoBehaviour
         return PlayerStats.instance.hasKey;
     }
 
-    private bool CheckIsPlayerNearDoor()
-    {
-        Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, radius, whoIsPlayer);
-
-        foreach (Collider2D coll in colls)
-        {
-            if (coll.tag == "Player")
-            {
-                return true;
-            }
-            else return false;
-        }
-
-        return false;
-    }
 
     private IEnumerator OffPopAnim()
     {
@@ -89,10 +76,19 @@ public class FinalDoor : MonoBehaviour
         animator.ResetTrigger("pop");
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnTriggerEnter2D(Collider2D coll)
     {
-        Gizmos.color = Color.blue;
+        if (coll.tag == "Player")
+        {
+            isPlayerNearDoor = true;
+        }
+    }
 
-        Gizmos.DrawWireSphere(transform.position, radius);
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.tag == "Player")
+        {
+            isPlayerNearDoor = false;
+        }
     }
 }
