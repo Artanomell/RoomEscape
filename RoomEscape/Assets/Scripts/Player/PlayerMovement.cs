@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     #region vars
     public float speed = 330;
+    public float maxMagnitude = 12;
 
     [SerializeField] private LayerMask obstacleMask;
 
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckObstacles();
         Movement();
+        LimitMagnitude();
     }
 
     /// <summary>
@@ -56,6 +58,19 @@ public class PlayerMovement : MonoBehaviour
             HyperInput.instance.LimitAxis("Horizontal", ValueLimitType.UnlockBelowZero);
         else
             HyperInput.instance.LimitAxis("Horizontal", ValueLimitType.LockBelowZero);
+    }
+
+
+    /// <summary>
+    /// Limits player magnitude
+    /// </summary>
+    private void LimitMagnitude()
+    {
+        // Trying to Limit Speed
+        if (rb.velocity.magnitude > maxMagnitude)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxMagnitude);
+        }
     }
 
     /// <summary>

@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1952539127521960}
+  m_IsPrefabAsset: 1
+--- !u!1 &1952539127521960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4256673571637784}
+  - component: {fileID: 114701356461052250}
+  - component: {fileID: 114993411681770916}
+  - component: {fileID: 114805059089905040}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4256673571637784
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952539127521960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.48, y: 7.43, z: 0.0625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114701356461052250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952539127521960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0aa45a7e0f7aa4f89a4a97b8666189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnimator: {fileID: 0}
+--- !u!114 &114805059089905040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952539127521960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55a6a276f2884d4287f02dc7b93ad5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes:
+  - Name: Horizontal
+    positiveButton: 100
+    altPositiveButton: 275
+    negativeButton: 97
+    altNegativeButton: 276
+    canGetInput: 1
+    limitValueAboveZero: 0
+    limitValueBelowZero: 0
+    accelerationTime: 0.2
+    decelerationTime: 0.1
+    value: 0
+  - Name: Vertical
+    positiveButton: 119
+    altPositiveButton: 273
+    negativeButton: 115
+    altNegativeButton: 274
+    canGetInput: 1
+    limitValueAboveZero: 0
+    limitValueBelowZero: 0
+    accelerationTime: 0.2
+    decelerationTime: 0.1
+    value: 0
+  - Name: Jump
+    positiveButton: 119
+    altPositiveButton: 0
+    negativeButton: 0
+    altNegativeButton: 0
+    canGetInput: 1
+    limitValueAboveZero: 0
+    limitValueBelowZero: 0
+    accelerationTime: 0
+    decelerationTime: 0
+    value: 0
+  buffKeys: 
+  keycodeLifeTime: 0.05
+--- !u!114 &114993411681770916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952539127521960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2b3a7fca5209541b7fb4b6ecdcb95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

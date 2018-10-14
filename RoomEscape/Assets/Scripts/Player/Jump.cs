@@ -13,6 +13,7 @@ public class Jump : MonoBehaviour
     [Tooltip("How much time does player get to jump right after he stepped off of the platform?")]
     public float coyoteTime = 0.2f;
     public bool isJumped { get; private set; }  // Is player has jumped already
+    
 
     private Rigidbody2D rb;
     private bool jumpRequest;       // Uses to call DoJump() in FixedUpdate
@@ -44,6 +45,8 @@ public class Jump : MonoBehaviour
             DoJump();
         }
     }
+
+    
 
     public void DoJump()
     {

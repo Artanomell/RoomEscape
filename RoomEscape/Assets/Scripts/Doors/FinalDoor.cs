@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FinalDoor : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class FinalDoor : MonoBehaviour
 
     public bool isOpened;
     public float radius = 1;
+    public LayerMask whoIsPlayer;
+    public UnityEvent enterDoor = new UnityEvent();
 
     private SpriteRenderer spriteRenderer;
     #endregion vars
+
 
     // Use this for initialization
     void Start()
@@ -32,17 +36,20 @@ public class FinalDoor : MonoBehaviour
         else
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
-                Debug.Log("VOSHEL");
-            // TODO: Level transition script
+            {
+                if (CheckIsPlayerNearDoor())
+                {
+                    enterDoor.Invoke();
+                }
+            }
         }
     }
 
     private void TryToOpen()
     {
-        // Check if the player is near the door
+        // Check if the player is near the door and does he has the key
         if (CheckIsPlayerNearDoor() && CheckIsHasKey())
             OpenDoor();
-
     }
 
     private void OpenDoor()
@@ -58,7 +65,8 @@ public class FinalDoor : MonoBehaviour
 
     private bool CheckIsPlayerNearDoor()
     {
-        Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, radius);
+        Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, radius, whoIsPlayer);
+
         foreach (Collider2D coll in colls)
         {
             if (coll.tag == "Player")
@@ -69,14 +77,6 @@ public class FinalDoor : MonoBehaviour
         }
 
         return false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "MainKey")
-        {
-            isOpened = true;
-        }
     }
 
     private void OnDrawGizmosSelected()
