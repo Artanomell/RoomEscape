@@ -14,7 +14,7 @@ Room Escape - 2D игра в жанре Puzzle-Platformer на ОС Windows, г�
 Мокапы:
 * Меню
 
-![Menu](https://cdn.discordapp.com/attachments/428973249502642208/499311704082219019/unknown.png)
+![Menu](https://cdn.discordapp.com/attachments/428973249502642208/501054670194737152/menu.gif)
 
 * Геймплей
 
