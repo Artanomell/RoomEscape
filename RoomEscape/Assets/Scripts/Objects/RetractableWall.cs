@@ -9,7 +9,15 @@ public class RetractableWall : MonoBehaviour
     public Vector3 closeVec;
     public bool canClose;
 
+
     [SerializeField] private bool isMoving;
+
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     public void MoveWall(SpriteRenderer switchSpriteRenderer)
     {
@@ -31,14 +39,16 @@ public class RetractableWall : MonoBehaviour
     {
         isMoving = true;
 
-        while (Vector2.Distance(transform.position, vec) >= 0.03f)
+        while (Vector2.Distance(transform.position, vec) >= 0.05f)
         {
-            yield return new WaitForEndOfFrame();
+            yield return null;
             Vector3 heading = transform.position - vec;
             float distance = heading.magnitude;
             Vector3 direction = (heading / distance).normalized;
-            transform.Translate(-direction * Time.deltaTime * speed);
+            transform.position -= direction * Time.deltaTime * speed;
         }
+
+        transform.position = vec;
 
         isMoving = false;
     }

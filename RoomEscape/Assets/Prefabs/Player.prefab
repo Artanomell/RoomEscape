@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 95171208234253044}
   - component: {fileID: 50467513678065984}
   - component: {fileID: 61732938268608536}
+  - component: {fileID: 114858453690762262}
   - component: {fileID: 114106505900768646}
   - component: {fileID: 114315626778700102}
   - component: {fileID: 114541765144657508}
@@ -227,7 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 330
-  maxMagnitude: 12
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
@@ -298,6 +298,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2b86a29670dde44a5b09871708e814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114858453690762262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629588622576494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aabc5d2358ad84f941caabcfb0c9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMagnitude: 12
 --- !u!212 &212057520743694432
 SpriteRenderer:
   m_ObjectHideFlags: 1

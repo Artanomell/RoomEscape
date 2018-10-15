@@ -100,7 +100,7 @@ public class PlayerDrag : MonoBehaviour
                 ForceMode2D.Impulse);
             draggedObj = null;
         }
-        else // If there is some obstacle
+      /*  else // If there is some obstacle
         {
 
             // Put object behind player
@@ -112,7 +112,7 @@ public class PlayerDrag : MonoBehaviour
             draggedObj.SetActive(true);
             draggedObj.transform.position = putBackArea.position;
             draggedObj = null;
-        }
+        }*/
     }
 
     private void OnDrawGizmosSelected()
