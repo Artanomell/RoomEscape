@@ -6,7 +6,7 @@ public class PlayerDrag : MonoBehaviour
 {
     public float ThrowForce = 10;
     public Transform putBackArea;
-    public float areaSize;
+    public Vector2 areaSizeVec;
     [ReadOnly]
     public bool isDragging;
     [ReadOnly]
@@ -40,7 +40,7 @@ public class PlayerDrag : MonoBehaviour
 
     private void Drag()
     {
-        Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, areaSize, whatIsDraggable);
+        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaSizeVec, 0, whatIsDraggable);
 
         foreach (Collider2D coll in colls)
         {
@@ -81,7 +81,7 @@ public class PlayerDrag : MonoBehaviour
 
     private void Throw()
     {
-        Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, areaSize, whatIsObstacle);
+        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaSizeVec, 0, whatIsObstacle);
 
         // Check is there obstacle in the place of throwing the object
         // If there is no obstacles
@@ -102,6 +102,7 @@ public class PlayerDrag : MonoBehaviour
         }
         else // If there is some obstacle
         {
+
             // Put object behind player
             isDragging = false;
 
@@ -118,6 +119,6 @@ public class PlayerDrag : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        Gizmos.DrawWireSphere(transform.position, areaSize);
+        Gizmos.DrawWireCube(transform.position, areaSizeVec);
     }
 }

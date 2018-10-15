@@ -100,7 +100,7 @@ MonoBehaviour:
     decelerationTime: 0
     value: 0
   buffKeys: 
-  keycodeLifeTime: 0.05
+  keycodeLifeTime: 0.036
 --- !u!114 &114993411681770916
 MonoBehaviour:
   m_ObjectHideFlags: 1
