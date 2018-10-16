@@ -6,7 +6,7 @@ public class PlayerDrag : MonoBehaviour
 {
     public float ThrowForce = 10;
     public Transform putBackArea;
-    public Vector2 areaSizeVec;
+    public Vector2 areaDragSizeVec;
     [ReadOnly]
     public bool isDragging;
     [ReadOnly]
@@ -40,7 +40,7 @@ public class PlayerDrag : MonoBehaviour
 
     private void Drag()
     {
-        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaSizeVec, 0, whatIsDraggable);
+        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaDragSizeVec, 0, whatIsDraggable);
 
         foreach (Collider2D coll in colls)
         {
@@ -81,7 +81,7 @@ public class PlayerDrag : MonoBehaviour
 
     private void Throw()
     {
-        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaSizeVec, 0, whatIsObstacle);
+        Collider2D[] colls = Physics2D.OverlapBoxAll(transform.position, areaDragSizeVec, 0, whatIsObstacle);
 
         // Check is there obstacle in the place of throwing the object
         // If there is no obstacles
@@ -100,25 +100,24 @@ public class PlayerDrag : MonoBehaviour
                 ForceMode2D.Impulse);
             draggedObj = null;
         }
-      /*  else // If there is some obstacle
-        {
+        /*  else // If there is some obstacle
+          {
 
-            // Put object behind player
-            isDragging = false;
+              // Put object behind player
+              isDragging = false;
 
-            Destroy(draggedObjFake);
-            draggedObjFake = null;
+              Destroy(draggedObjFake);
+              draggedObjFake = null;
 
-            draggedObj.SetActive(true);
-            draggedObj.transform.position = putBackArea.position;
-            draggedObj = null;
-        }*/
+              draggedObj.SetActive(true);
+              draggedObj.transform.position = putBackArea.position;
+              draggedObj = null;
+          }*/
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-
-        Gizmos.DrawWireCube(transform.position, areaSizeVec);
+        Gizmos.DrawWireCube(transform.position, areaDragSizeVec);
     }
 }

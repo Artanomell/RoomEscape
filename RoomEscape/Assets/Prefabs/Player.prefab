@@ -117,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629588622576494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.1, y: -0.56, z: 0}
+  m_LocalPosition: {x: -8.95, y: -0.54, z: 0}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children:
   - {fileID: 4602486932224818}
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThrowForce: 17
   putBackArea: {fileID: 4033475547628360}
-  areaSizeVec: {x: 1.3, y: 0.47}
+  areaDragSizeVec: {x: 1.3, y: 0.47}
   isDragging: 0
   draggedObj: {fileID: 0}
   draggedObjFake: {fileID: 0}

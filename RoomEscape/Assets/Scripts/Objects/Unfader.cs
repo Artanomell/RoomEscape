@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarkVeil : MonoBehaviour
+public class Unfader : MonoBehaviour
 {
 
     public void GoAlpha()

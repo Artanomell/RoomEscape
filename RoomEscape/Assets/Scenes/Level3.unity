@@ -2405,8 +2405,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -10, y: 7, z: 0}
     second:
-      m_TileIndex: 45
-      m_TileSpriteIndex: 45
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -3523,8 +3523,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: b33e145d50a5fc04aa3d8b667f1c1dbb, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: c4abcabbe6cd72d4db1993c2c66fd507, type: 2}
   - m_RefCount: 2
@@ -3575,7 +3575,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a98133464378cab438e71f9adb3044ff, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: a48e1c9d2e7a2dc48be390da8c58b9b8, type: 2}
-  - m_RefCount: 104
+  - m_RefCount: 103
     m_Data: {fileID: 11400000, guid: a1787fdaa4f28934b8eafbdc2b5ac1d8, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 3484497f3d0945c49a74743f57e781b5, type: 2}
@@ -3628,8 +3628,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300108, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300058, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
   - m_RefCount: 2
@@ -3680,7 +3680,7 @@ Tilemap:
     m_Data: {fileID: 21300070, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300112, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
-  - m_RefCount: 104
+  - m_RefCount: 103
     m_Data: {fileID: 21300110, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300080, guid: 540229b1cb65c4d48a0e5e829a4cfd6a, type: 3}
@@ -4801,6 +4801,11 @@ Prefab:
         type: 2}
       propertyPath: enterDoor.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenSceneWithTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 114468942987601452, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb,
+        type: 2}
+      propertyPath: enterDoor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb, type: 2}

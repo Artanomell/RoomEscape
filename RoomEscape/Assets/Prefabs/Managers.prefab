@@ -67,9 +67,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axes:
   - Name: Horizontal
-    positiveButton: 100
+    positiveButton: 0
     altPositiveButton: 275
-    negativeButton: 97
+    negativeButton: 0
     altNegativeButton: 276
     canGetInput: 1
     limitValueAboveZero: 0

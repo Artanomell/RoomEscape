@@ -9,15 +9,8 @@ public class RetractableWall : MonoBehaviour
     public Vector3 closeVec;
     public bool canClose;
 
-
     [SerializeField] private bool isMoving;
-
-    private Rigidbody2D rb;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    
 
     public void MoveWall(SpriteRenderer switchSpriteRenderer)
     {
