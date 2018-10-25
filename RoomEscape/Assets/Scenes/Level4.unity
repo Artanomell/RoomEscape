@@ -389,7 +389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205871842561994, guid: c63d468868aeff541a270de220c9b518, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c63d468868aeff541a270de220c9b518, type: 2}
@@ -696,7 +696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4551632458808484, guid: 3dce5e36724637c4a9cda7bc87355d3b, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dce5e36724637c4a9cda7bc87355d3b, type: 2}
@@ -970,7 +970,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4551632458808484, guid: 3dce5e36724637c4a9cda7bc87355d3b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1633768112937846, guid: 3dce5e36724637c4a9cda7bc87355d3b, type: 2}
       propertyPath: m_Name
@@ -5658,7 +5658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4735557998778764, guid: 316a20e57f9d0954a980a593894e91f9, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 316a20e57f9d0954a980a593894e91f9, type: 2}
@@ -5868,7 +5868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4668901268833770, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114468942987601452, guid: 8ec084d6b301b664fb5ab7e7bf9cb9bb,
         type: 2}
@@ -6023,7 +6023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1773228883 stripped
 RectTransform:
@@ -6694,7 +6694,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205871842561994, guid: c63d468868aeff541a270de220c9b518, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212014085855851406, guid: c63d468868aeff541a270de220c9b518,
         type: 2}
